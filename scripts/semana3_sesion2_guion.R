@@ -40,7 +40,8 @@ seq(2000, 2010, by = 2)
 
 # 🟢 TU TURNO: con el atajo `:` crea el vector de años 2018 a 2026.
 
-
+seq(2018:2026)
+# [1] 1 2 3 4 5 6 7 8 9
 
 # -----------------------------------------------------------------------------
 # BLOQUE B — Indexación (subsetting)
@@ -107,6 +108,11 @@ ingresos * 1.19
 ## Operar dos vectores: elemento a elemento -----------------------------------
 # 🔵 CORRE Y OBSERVA
 salario_nominal <- c(450000, 920000, 380000)
+# salario_nominal <- c(450000, 920000, 380000, 280000)
+# [1] 450000.0 882070.9 349586.0 280000.0
+# Aviso: In salario_nominal/ipc : longitud de objeto mayor no es múltiplo de la 
+# longitud de uno menor
+
 ipc             <- c(1.000,  1.043,  1.087)
 salario_nominal / ipc          # cada salario por su propio IPC
 
@@ -132,7 +138,8 @@ anios[salario_real > 460000]
 
 # 🟢 TU TURNO: ¿en qué años el salario real fue MENOR a 450.000? (usa < )
 
-
+anios[salario_real < 450000]
+# En ningún año el salario real fue menor a 450.000 (integer(0))
 
 # -----------------------------------------------------------------------------
 # CIERRE — crear c()/seq()/rep() · seleccionar [ ] · condición v[v>x] ·
